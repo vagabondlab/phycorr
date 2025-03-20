@@ -1,6 +1,6 @@
-# RetroICOR Pipeline
+# Physio Pipeline
 
-This repository contains a Matlab-based pipeline for performing RetroICOR analysis on physiological data. The pipeline consists of preprocessing steps to extract cardiac and respiratory signals, followed by the RetroICOR processing itself.
+This repository contains a Matlab-based pipeline for performing RetroICOR analysis on physiological data. The pipeline consists of preprocessing steps to extract cardiac and respiratory signals using R-DECO, followed by the RetroICOR processing itself.
 
 ## Workflow
 
@@ -8,7 +8,7 @@ The pipeline is executed in the following order:
 
 1.  **Preprocessing:**
     * `preprocessing_1.m`: Processes raw physiological data to prepare it for peak detection.
-    * R-DECO (external tool): Used to extract physiological peaks (e.g., R-peaks from ECG).
+    * **r-deco (included in repository):** Used to extract physiological peaks (e.g., R-peaks from ECG). Specifically, execute `rR_DECO.m` from the `r_deco` folder.
     * `consolidation_2.m`: Merges the preprocessed physiological data and the extracted peaks into a single `.mat` file.
     * `generate_1D_main_3v2.m`: Generates 1D representations of the cardiac (QRS) and respiratory signals from the consolidated data. Requires `generate_1D_fun_1.m` to be in the Matlab path.
 2.  **RetroICOR Processing:**
@@ -21,13 +21,14 @@ The pipeline is executed in the following order:
 1.  **Run `preprocessing_1.m`:**
     * Execute `preprocessing_1.m` in Matlab.
     * Input the raw physiological data.
-2.  **Extract Peaks using R-DECO:**
-    * Use the R-DECO tool to identify and extract physiological peaks (e.g., R-peaks).
+2.  **Extract Peaks using r-deco:**
+    * Navigate to the `r_deco` folder within this repository.
+    * Execute `rR_DECO.m` in Matlab to identify and extract physiological peaks (e.g., R-peaks).
 3.  **Run `consolidation_2.m`:**
     * Execute `consolidation_2.m` in Matlab.
     * In the GUI:
         * Select the preprocessed physiological data.
-        * Select the extracted peaks from R-DECO.
+        * Select the extracted peaks from r-deco.
         * Specify an output filename for the consolidated `.mat` file.
 4.  **Run `generate_1D_main_3v2.m`:**
     * Ensure that `generate_1D_fun_1.m` is in the Matlab path (`addpath('path/to/generate_1D_fun_1.m')`).
@@ -55,8 +56,12 @@ The pipeline is executed in the following order:
 ## Dependencies
 
 * Matlab
-* R-DECO (external tool)
 * BIDS-compliant fMRI data
+
+## Proprietary Mentions
+
+* **RetroICOR:** This method is based on the original work by Glover et al. (2000), "Retrospective correction of physiological fluctuation in fMRI signals." NeuroImage 11, 162–175.
+* **r-deco:** This tool is included within this repository, and is intended for the detection of physiological peaks. Please cite this repository when using the r-deco tool.
 
 ## Known Issues
 
@@ -67,5 +72,4 @@ The pipeline is executed in the following order:
 * Fix the output folder issue in `retroicor.m`.
 * Improve error handling and input validation.
 * Add more detailed documentation and examples.
-* Consider adding support for other physiological data formats.
 * Automate the movement of the output files.
