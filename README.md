@@ -33,9 +33,10 @@ The pipeline is executed in the following order:
 4.  **Run `generate_1D_main_3v2.m`:**
     * Ensure that `generate_1D_fun_1.m` is in the Matlab path (`addpath('path/to/generate_1D_fun_1.m')`).
     * Execute `generate_1D_main_3v2.m` in Matlab.
-    * Select the folder containing the consolidated `.mat` files.
-    * Specify the output file.
-    * This step will generate 1D representations of the QRS and respiratory signals.
+    * In the GUI:
+       * Select the folder containing the consolidated `.mat` files.
+       * Specify the output file.
+       * This step will generate 1D representations of the QRS and respiratory signals.
 
 ### 2. RetroICOR Processing
 
