@@ -11,7 +11,7 @@ The pipeline is executed in the following order:
 
 1.  **Preprocessing:**
     * `preprocessing.m`: Processes raw physiological data to prepare it for peak detection.
-    * **r-deco (included in repository):** Used to extract physiological peaks (e.g., R-peaks from ECG). Specifically, execute `rR_DECO.m` from the `r_deco` folder.
+    * **r-deco (included in repository):** Used to extract physiological peaks (e.g., R-peaks). Specifically, execute `R_DECO.m` from the `r_deco` folder.
     * `consolidation_GUI.m`: Merges the preprocessed physiological data and the extracted peaks into a single `.mat` file.
     * `generate_1D_main_GUI_v2.m`: Generates 1D representations of the cardiac (QRS) and respiratory signals from the consolidated data. Requires `generate_1D_fun_1.m` to be in the Matlab path.
 2.  **RetroICOR Processing:**
