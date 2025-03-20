@@ -61,7 +61,7 @@ The pipeline is executed in the following order:
 ## Proprietary Mentions
 
 * **RetroICOR:** This method is based on the original work by Glover et al. (2000), "Retrospective correction of physiological fluctuation in fMRI signals." NeuroImage 11, 162–175.
-* **r-deco:** This tool is included within this repository, and is intended for the detection of physiological peaks. Please cite this repository when using the r-deco tool.
+* **R-DECO:** This tool is based on the original work by Moeyersons, J. et al. (2020)," R-DECO: An open-source Matlab based graphical user interface for the detection and correction of R-peaks (version 1.0.0). PhysioNet. https://doi.org/10.13026/x6j7-sp58."
 
 ## Known Issues
 
