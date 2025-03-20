@@ -61,6 +61,7 @@ The pipeline is executed in the following order:
 
 * Matlab
 * BIDS-compliant fMRI data
+* Physiological data
 
 ## Proprietary Mentions
 
