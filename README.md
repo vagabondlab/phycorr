@@ -2,6 +2,8 @@
 
 PHYCORR (Physiological Correction) contains a Matlab-based pipeline for performing R-DECO and RetroICOR analysis on physiological data. The pipeline consists of preprocessing steps to extract cardiac and respiratory signals using R-DECO, followed by the RetroICOR processing itself.
 
+* Base code, and functions for the pipeline were provided by our collaborators from Slocco's and Napadow's Laboratories at Spaulding Rehabilitation Hospital (Lizbeth Ayoub, Andrew Bolender, and Roberta Slocco).
+
 ## Workflow
 
 The pipeline is executed in the following order:
