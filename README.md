@@ -7,6 +7,8 @@ PHYCORR (Physiological Correction) contains a Matlab-based pipeline for performi
 
 ## Workflow
 
+The physiological raw data were collected using four channels in LabChart: heartrate, respiration, stimulus triggers and MRI triggers.
+
 The pipeline is executed in the following order:
 
 1.  **Preprocessing:**
