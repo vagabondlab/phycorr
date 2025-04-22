@@ -19,7 +19,7 @@ The pipeline is executed in the following order:
 2.  **RetroICOR Processing:**
     * `retroicor.m`: Performs the RetroICOR analysis using the generated 1D signals and BOLD fMRI data.
 
-## Detailed Instructions
+## Instructions
 
 ### 1. Preprocessing
 
