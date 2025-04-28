@@ -26,6 +26,7 @@ The pipeline is executed in the following order:
 1.  **Run `preprocessing.m`:**
     * Execute `preprocessing.m` in Matlab.
     * Input the raw physiological data.
+    * OBS: Modify filter function according to data (less or more aggressive)
 2.  **Extract Peaks using r-deco:**
     * Navigate to the `r_deco` folder within this repository.
     * Execute `R_DECO.m` in Matlab to identify and extract physiological peaks (e.g., R-peaks).
